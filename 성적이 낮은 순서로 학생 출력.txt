@@ -1,0 +1,13 @@
+#성적이 낮은 순서로 학생 출력
+
+n = int(input())
+
+array = []
+for i in range(n):
+	input_data = input().split
+	array.append((input_data[0], int(input_data[1])))
+
+array = sorted(array, key=lamda student: student[1])
+#key 매개변수에는 정렬 기준을 지정하는 함수를 전달. 여기서는 람다 함수를 사용하여 각 학생 튜플의 두 번째 요소인 성적을 기준으로 정렬하도록 함
+for student in array:
+	print(student[0], end=' ')
